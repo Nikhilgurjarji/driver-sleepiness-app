@@ -151,11 +151,11 @@ class DrowsinessDetector(VideoTransformerBase):
 run = st.toggle("📷 Start Camera")
 
 if run:
-    webrtc_streamer(
-        key="sleep",
-        video_transformer_factory=DrowsinessDetector,
-        media_stream_constraints={"video": True, "audio": False},
-        async_transform=True
-    )
+   webrtc_streamer(
+    key="sleep",
+    video_transformer_factory=DrowsinessDetector,
+    media_stream_constraints={"video": True, "audio": False},
+    async_transform=True
+)
 else:
     st.info("Camera Stopped")
